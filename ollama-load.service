@@ -1,0 +1,23 @@
+[Unit]
+Description=Ollama GPU load monitor
+After=network.target ollama.service
+
+[Service]
+Type=simple
+User=ollama
+Group=ollama
+Environment=OLLAMA_URL=http://127.0.0.1:11434
+Environment=OLLAMA_LOAD_BIND=127.0.0.1
+Environment=OLLAMA_LOAD_PORT=8765
+Environment=OLLAMA_LOAD_INTERVAL=2
+Environment=OLLAMA_LOAD_HISTORY=300
+ExecStart=/usr/bin/python3 /opt/ollama-load/ollama_load_service.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

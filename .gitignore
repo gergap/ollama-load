@@ -1,0 +1,4 @@
+.settings.vim
+tags
+__pycache__/
+*.py[cod]

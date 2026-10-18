@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Ollama Load
+Comment=Monitor Ollama GPU and model load
+Exec=/usr/bin/python3 /opt/ollama-load/ollama_load_gui.py
+Terminal=false
+Categories=Utility;System;
+StartupWMClass=OllamaLoad

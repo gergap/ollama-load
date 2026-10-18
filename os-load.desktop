@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=OS Load
+Comment=Monitor local operating-system load
+Exec=/usr/bin/python3 /opt/ollama-load/os-load.py
+Terminal=false
+Categories=Utility;System;
+StartupWMClass=OSLoad
